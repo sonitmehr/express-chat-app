@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+:root {
+	--dark-color-a: #272d29;
+	--dark-color-b: #1f2652;
+	--light-color: #272d29;
+	--success-color: #5cb85c;
+	--error-color: #d9534f;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	/* background: white; */
+    background-image: url('/images/peakpx.jpg');
+    
+	margin: 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 15px;
+	background: #23b197d6;
+	color: rgba(255, 255, 255, 0.925);
+	border: 0;
+	font-size: 17px;
+}
+
+/* Chat Page */
+
+.chat-container {
+	max-width: 80vw;
+	/* background: #fff; */
+	margin: 10px auto;
+    background-color: transparent;
+	overflow: hidden;
+    height: 100vh;
+    
+}
+
+.chat-header {
+	background: var(--dark-color-a);
+	color: #fff;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+    height: 70vh;
+}
+
+.chat-sidebar {
+	background: var(--dark-color-b);
+	color: #fff;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	/* background: rgba(0, 0, 0, 0.1); */
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 30px;
+	
+	overflow-y: scroll;
+    
+}
+
+.chat-messages .message {
+	padding: 10px;
+	margin-bottom: 15px;
+	background-color: var(--light-color);
+	border-radius: 5px;
+    color: white;
+	overflow-wrap: break-word;
+}
+
+.chat-messages .message .meta {
+	font-size: 15px;
+	font-weight: bold;
+	color: #a2a2a2;
+	opacity: 0.7;
+	margin-bottom: 7px;
+}
+
+.chat-messages .message .meta span {
+	color: #8d8c8c;
+}
+
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: var(--dark-color-a);
+    
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+}
+
+/* Join Page */
+.join-container {
+	max-width: 500px;
+	margin: 80px auto;
+	color: #fff;
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.join-main {
+	padding: 30px 40px;
+	background: var(--dark-color-b);
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+}
+.center-bot {
+    
+    width: max-content;
+    border: 1px solid green;
+    /* padding: 10px; */
+  }
+.bot-message {
+    margin: 10px auto;
+    word-wrap: break-word;
+    background-color: #54c0d8;
+    padding: 10px;
+    
+    border-radius: 20px;
+    
+}
+.talk-bubble {
+    padding: 5px;
+	margin-bottom: 10px;
+	
+	border-radius: 5px;
+    color: white;
+	overflow-wrap: break-word;
+    position: relative;
+  }
+  .black-color{
+    background-color: var(--light-color);
+  }
+  .green-color{
+    background-color: #5cb85c;
+  }
+  
+  .talk-bubble .meta{
+    color: #8d8c8c;
+  }
+  
+  .triangle.left-top:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -20px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 22px solid;
+    border-color: var(--light-color) transparent transparent transparent;
+  }
+  
+  .triangle.right-top:before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: auto;
+      right: -20px;
+      top: 0;
+      bottom: auto;
+      border: 32px solid;
+      border-color: var(--light-color) transparent transparent transparent;
+  }
+
+  .talktext {
+    color: white;
+    padding: 1em;
+  }
